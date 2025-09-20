@@ -102,4 +102,8 @@
     line-height: 1.5rem;
     font-size: 1.1rem;
   }
+
+  h2 {
+    line-height: 30.4px;
+  }
 }
