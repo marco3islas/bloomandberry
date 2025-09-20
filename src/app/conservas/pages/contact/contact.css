@@ -30,3 +30,34 @@ button {
   padding: 0.5rem 2rem;
   font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
+
+/* --- Pantallas pequeñas (≤ 375px) --- */
+@media (max-width: 375px) {
+  body {
+    padding: 5px;
+  }
+
+  .contact-container {
+    margin: .5rem auto;
+    padding: .5rem;
+    width: 370px;
+    max-width: 90%;
+  }
+
+  .contact-container h2 {
+    font-size: 1.6rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    /* botón ocupa todo el ancho */
+    min-width: unset;
+    /* elimina ancho mínimo */
+  }
+}

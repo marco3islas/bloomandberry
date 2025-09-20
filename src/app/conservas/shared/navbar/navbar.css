@@ -29,10 +29,6 @@
   background-color: #cbd6ef;
 }
 
-.tool-bar {
-  background-color: #d7e3ff;
-}
-
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -40,5 +36,36 @@
 
   .menu-button {
     display: block;
+  }
+}
+
+@media (max-width: 375px) {
+  :host ::ng-deep .mat-mdc-menu-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px;
+    /* Espacio entre ítems del menú */
+    padding: 8px 0;
+    /* Padding vertical para el menú */
+    min-width: 200px;
+    /* Ajusta el ancho del menú si es necesario */
+  }
+
+  :host ::ng-deep .mat-mdc-menu-item {
+    display: flex;
+    flex-direction: row;
+    /* Ícono y texto en fila dentro de cada ítem */
+    align-items: center;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    text-align: left;
+  }
+
+  .button-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-align: left;
   }
 }

@@ -46,6 +46,24 @@ body {
 }
 
 /*=========Media queries ===========*/
+@media (max-width: 768px) {
+  .hero img {
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+
+  .titulo span {
+    line-height: 30px;
+  }
+
+  .button button {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+}
 
 @media (max-width: 375px) {
   .titulo {
@@ -147,6 +165,44 @@ body {
 
 /*=========Media queries ===========*/
 
+@media (max-width: 1024px) {
+  .about_text {
+    max-width: 500px;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .fotos img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .about_text {
+    font-size: 22px;
+    line-height: 25px;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  .fotos .mermeladas {
+    top: 90px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .fotos .frutas {
+    z-index: 2;
+    top: 110px;
+    left: 150px;
+  }
+}
+
 @media (max-width: 375px) {
 
   .about-preview .container {
@@ -216,6 +272,34 @@ mat-icon {
 
 /*=========Media queries ===========*/
 
+@media (max-width: 1024px) {
+  .valoresCard {
+    padding: .8rem;
+    width: 700px;
+    max-width: 100%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .valor-preview {
+    padding: 10px;
+  }
+
+  .valoresCard {
+    padding: 1rem;
+    width: 350px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  mat-card-content {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
 @media (max-width: 375px) {
 
   .valor-preview {
@@ -280,6 +364,12 @@ mat-card.testimonial:hover {
 }
 
 /*=========Media queries ===========*/
+@media (max-width: 768px) {
+  mat-card-subtitle {
+    font-size: 1.1rem;
+  }
+
+}
 
 @media (max-width: 375px) {
   mat-card-subtitle {
