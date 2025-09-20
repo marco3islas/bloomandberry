@@ -45,6 +45,55 @@ body {
   border-radius: 100%;
 }
 
+/*=========Media queries ===========*/
+
+@media (max-width: 375px) {
+  .titulo {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 700;
+    max-width: 100%;
+    width: 370px;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titulo span {
+    padding: 0 5px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    width: 375px;
+    max-width: 100%;
+  }
+
+  .hero img {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+
+  .titulo span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .descripcion {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+
 /* Nuestra pasion */
 
 .about-preview {
@@ -53,8 +102,8 @@ body {
 }
 
 .about-preview .container {
-  width: 100%;
-  max-width: 1200px;
+  width: 1200px;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 10rem;
@@ -72,7 +121,6 @@ body {
   max-width: 350px;
   height: 450px;
   position: relative;
-
 }
 
 .fotos img {
@@ -94,6 +142,20 @@ body {
   z-index: 2;
   top: 50px;
   left: 150px;
+}
+
+
+/*=========Media queries ===========*/
+
+@media (max-width: 375px) {
+
+  .about-preview .container {
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
 }
 
 /* Valores preview */
@@ -151,6 +213,26 @@ mat-icon {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+
+/*=========Media queries ===========*/
+
+@media (max-width: 375px) {
+
+  .valor-preview {
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    padding: 10px;
+  }
+
+  .valoresCard {
+    padding: .5rem;
+    width: 300px;
+    max-width: 100%;
+    margin: auto;
+  }
+}
+
 /* Testimonials */
 
 .testimonials {
@@ -195,4 +277,12 @@ mat-card.testimonial:hover {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+/*=========Media queries ===========*/
+
+@media (max-width: 375px) {
+  mat-card-subtitle {
+    margin-left: 36px;
+  }
 }
