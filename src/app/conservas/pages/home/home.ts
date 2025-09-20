@@ -1,7 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
+import { Router, RouterLink } from '@angular/router';
 
 interface Valores {
   titulo: string;
@@ -18,11 +20,13 @@ interface Testimonials {
 
 @Component({
   selector: 'app-home',
-  imports: [MatButtonModule, MatCardModule, MatIcon],
+  imports: [MatButtonModule, MatCardModule, MatIcon, CommonModule, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
 export default class Home {
+
+  constructor(private router: Router) { }
 
   valor: Valores[] = [
     {
@@ -67,5 +71,9 @@ export default class Home {
       photo: 'assets/images/ana.webp'
     }
   ];
+
+  irProductos() {
+    this.router.navigate(['productos']);
+  }
 
 }
