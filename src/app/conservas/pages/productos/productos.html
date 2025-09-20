@@ -21,6 +21,7 @@
 
   <section class="products-container">
     <h2>Galeria de productos</h2>
+    <h3> Mermeladas y Conservas </h3>
     <div class="card-grid">
       <mat-card *ngFor="let category of productCategories" class="product-card">
         <img mat-card-image [src]="category.image" alt="Foto de mermeladas o conservas">
@@ -60,6 +61,28 @@
         </mat-card-content>
       </mat-card>
     </div>
+  </section>
+  <section class="products-container">
+  <h2>Tes y Tesinas</h2>
+  <img class="tes_image" src="assets/images/TES.webp" alt="Foto de los Tes en sus envases elegantes">
+    <div class="card-grid">
+      <mat-card *ngFor="let item of tesCategories" class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ item.sabor }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ item.ingredientes }}</p>
+          <p>{{ item.beneficios }}</p>
+          <p>{{ item.presentacion }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+  <section class="products-container">
+  <h2>Botanas</h2>
+
+  <img class="botanas_image" src="assets/images/botanas.webp" alt="Foto de una bolsa, con botanas diversas como: pepitas, nueces, nueces de la india, arandanos, pasas, etc">
+
   </section>
 
 </body>

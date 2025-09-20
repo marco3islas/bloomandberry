@@ -34,7 +34,8 @@ header .text p {
   padding: 2rem;
 }
 
-.section-title {
+.section-title,
+mat-card-title {
   margin: 2rem 0 1rem;
   font-size: 1.5rem;
   font-weight: bold;
@@ -56,8 +57,19 @@ header .text p {
 
 .product-card img {
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
+}
+
+mat-card-content p {
+  font-size: 20px;
+}
+
+.tes_image,
+.botanas_image {
+  width: 400px;
 }
