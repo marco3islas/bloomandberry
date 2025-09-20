@@ -1,0 +1,65 @@
+<body>
+  <header>
+    <div class="text">
+      <h2>Nuestros Productos</h2>
+      <h1>Bloom &amp; Berry</h1>
+      <p>Siempre naturales, sin conservadores.</p>
+    </div>
+
+  </header>
+  <span>
+    Foto de
+    <a
+      href="https://unsplash.com/es/@emmanuelphaeton?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+      Emmanuel Phaeton
+    </a> en
+    <a
+      href="https://unsplash.com/es/fotos/un-tazon-de-fruta-en-un-plato-1N7Ftmynp48?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+      Unsplash
+    </a>
+  </span>
+
+  <section class="products-container">
+    <h2>Galeria de productos</h2>
+    <div class="card-grid">
+      <mat-card *ngFor="let category of productCategories" class="product-card">
+        <img mat-card-image [src]="category.image" alt="Foto de mermeladas o conservas">
+        <mat-card-header>
+          <mat-card-title>{{ category.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ul>
+            <li *ngFor="let item of category.items">{{ item }}</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Presentaciones -->
+    <h2 class="section-title">Presentaciones y Gramajes</h2>
+    <div class="card-grid">
+      <mat-card *ngFor="let pres of productPresentations" class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ pres.type }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ pres.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <!-- Packs -->
+    <h2 class="section-title">Packs</h2>
+    <div class="card-grid">
+      <mat-card *ngFor="let pack of productPacks" class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ pack.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ pack.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+</body>

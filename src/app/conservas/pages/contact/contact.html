@@ -1,0 +1,39 @@
+<body>
+  <section class="contact-container">
+    <h2>Contacto</h2>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+      <!-- Nombre -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre" placeholder="Tu nombre completo">
+        <mat-error *ngIf="nombre?.hasError('required')">El nombre es obligatorio</mat-error>
+        <mat-error *ngIf="nombre?.hasError('minlength')">Debe tener al menos 3 caracteres</mat-error>
+      </mat-form-field>
+
+      <!-- Email -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="ejemplo@email.com">
+        <mat-error *ngIf="email?.hasError('required')">El email es obligatorio</mat-error>
+        <mat-error *ngIf="email?.hasError('email')">Debe ser un email válido</mat-error>
+      </mat-form-field>
+
+      <!-- Mensaje -->
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Mensaje</mat-label>
+        <textarea matInput rows="5" formControlName="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+        <mat-error *ngIf="mensaje?.hasError('required')">El mensaje es obligatorio</mat-error>
+        <mat-error *ngIf="mensaje?.hasError('minlength')">Debe tener al menos 10 caracteres</mat-error>
+      </mat-form-field>
+
+      <!-- Botón -->
+      <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+        Enviar
+      </button>
+
+    </form>
+  </section>
+
+</body>

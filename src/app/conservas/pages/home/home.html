@@ -1,0 +1,90 @@
+<body>
+  <div class="container">
+    <div class="hero">
+
+      <div>
+        <h1 class="titulo">
+          <span>¿Ya conoces?</span>
+          Bloom & Berry
+          <span class="subtitulo">Somos productores de pulpas naturales.</span>
+        </h1>
+        <p class="descripcion">Deleitate con nuestras mermeladas y conservas artesanales, elaboradas por productores
+          locales.</p>
+
+        <div class="example-button-row">
+          <button matButton="filled">Ver productos!</button>
+        </div>
+      </div>
+
+
+      <img class="frutasConserva" src="assets/images/frutas-en-conserva.jpeg" alt="frutas en conserva">
+    </div>
+  </div>
+  <section class="about-preview">
+    <div class="container">
+      <div class="fotos">
+        <img class="mermeladas" src="assets/images/mermeladas.webp"
+          alt="Foto de envases con mermeladas de diferentes colores">
+        <img class="frutas" src="assets/images/frutas.webp" alt="Foto de frutas diversas vista satelital">
+      </div>
+      <div class="texto">
+        <h2 class="about_h2">Nuestra Pasion</h2>
+        <p class="about_text">Somos Bloom & berry, uniendo la tradicion de Xochimilco con conservas de frutas que
+          celebran
+          la naturaleza y el
+          trabajo de productores locales.</p>
+        <p class="about_text">Destacando el trabajo artesanal y la produccion de pulpas 100% naturales,
+          frescas y de calidad, distribuidas a consumidores y negocios.</p>
+        <p class="about_text">Esforzandonos por crear una comunidad inclusiva, donde todas las voces sean escuchadas.
+        </p>
+
+      </div>
+    </div>
+  </section>
+  <section class="valor-preview">
+    <div class="container">
+      <h2>Promesas de Valor.</h2>
+
+      <div class="valoresCard">
+        @for(item of valor; track $index){
+        <mat-card class="card" appearance="outlined">
+          <mat-icon>{{item.imagen}}</mat-icon>
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title>{{ item.titulo}}</mat-card-title>
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            {{item.descripcion}}
+          </mat-card-content>
+        </mat-card>
+        }
+      </div>
+    </div>
+
+
+  </section>
+  <section class="testimonials">
+    <h2>Lo Que Dicen de Nosotros</h2>
+
+    <div class="testimonial-cards">
+      @for(item of testimonial; track $index){
+      <mat-card class="testimonial">
+        <mat-card-header>
+          <div mat-card-avatar class="testimonial-avatar">
+            <img [src]="item.photo" alt="Foto de {{item.name}}">
+          </div>
+          <div>
+            <mat-card-title>{{ item.name }}</mat-card-title>
+            <mat-card-subtitle>{{ item.role }}</mat-card-subtitle>
+          </div>
+        </mat-card-header>
+
+        <mat-card-content>
+          <p>"{{ item.comment }}"</p>
+        </mat-card-content>
+      </mat-card>
+      }
+    </div>
+  </section>
+</body>

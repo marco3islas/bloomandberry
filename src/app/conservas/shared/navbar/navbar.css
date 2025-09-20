@@ -1,0 +1,44 @@
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #005cbb;
+}
+
+.logo {
+  width: 70px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-button {
+  display: none;
+}
+
+.menuBar a {
+  color: #005cbb !important;
+}
+
+.active {
+  background-color: #cbd6ef;
+}
+
+.tool-bar {
+  background-color: #d7e3ff;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}

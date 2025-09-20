@@ -1,0 +1,55 @@
+.footer {
+  background: #263238;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a mat-icon {
+  font-size: 28px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover mat-icon {
+  color: #90caf9;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,198 @@
+body {
+  width: 100%;
+  background-color: #b9fbec;
+}
+
+.titulo {
+  font-size: 52px;
+  line-height: 52px;
+  font-weight: 700;
+  width: 100%;
+  max-width: 600px;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titulo span {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.descripcion {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  padding: 20px;
+  width: 1250px;
+  max-width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+/* Nuestra pasion */
+
+.about-preview {
+  padding: 20px;
+  background-color: white;
+}
+
+.about-preview .container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+
+
+.about_text {
+  font-size: 22px;
+  line-height: 25px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.fotos {
+  max-width: 350px;
+  height: 450px;
+  position: relative;
+
+}
+
+.fotos img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  position: absolute;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fotos .mermeladas {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.fotos .frutas {
+  z-index: 2;
+  top: 50px;
+  left: 150px;
+}
+
+/* Valores preview */
+
+.valor-preview {
+  width: 100%;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  padding: 40px;
+}
+
+.valoresCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+mat-card-content {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+mat-card-title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+mat-icon {
+  font-size: 48px;
+  width: 50px;
+  height: 50px;
+  color: #43a047;
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials */
+
+.testimonials {
+  padding: 40px;
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.about_h2 {
+  margin-bottom: 80px;
+}
+
+.testimonial-cards {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  filter: drop-shadow(2px 2px 4px gray);
+  gap: 24px;
+}
+
+mat-card.testimonial {
+  width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+}
+
+mat-card.testimonial:hover {
+  transform: translateY(-6px);
+}
+
+.testimonial-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}

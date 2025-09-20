@@ -1,0 +1,63 @@
+header {
+  display: flex;
+  height: 80vh;
+  background-image: url("/assets/images/frutas_productos.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center/cover;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* oscurece la imagen */
+  z-index: 0;
+}
+
+header .text {
+  filter: drop-shadow(0 0 1px black);
+}
+
+header .text p {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.products-container {
+  padding: 2rem;
+}
+
+.section-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
