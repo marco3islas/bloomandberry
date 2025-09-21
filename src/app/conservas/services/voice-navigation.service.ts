@@ -49,13 +49,13 @@ export class VoiceNavigationService {
       } else if (command.includes('about')) {
         this.router.navigate(['/about']);
       } else if (command.includes('contacto')) {
-        this.router.navigate(['/contacto']);
+        this.router.navigate(['/main/contacto']);
       } else if (command.includes('productos')) {
         this.router.navigate(['/productos']);
       } else if (command.includes('subir')) {
-        window.scrollBy({ top: -150, behavior: 'smooth' });
+        window.scrollBy({ top: -300, behavior: 'smooth' });
       } else if (command.includes('bajar')) {
-        window.scrollBy({ top: 150, behavior: 'smooth' });
+        window.scrollBy({ top: 300, behavior: 'smooth' });
       } else {
         console.log('Comando no reconocido');
       }
