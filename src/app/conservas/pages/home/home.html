@@ -15,8 +15,10 @@
           <button mat-flat-button color="primary" [routerLink]="['/main/productos']">Ver productos!</button>
           <!-- Botones audio -->
           <h4>Navegar con voz, presiona escuchar y el nombre de la pagina a la que quieres ir</h4>
-          <button mat-raised-button color="accent" (click)="start()">Eschuchar</button>
-          <button mat-button (click)="stop()">Detener</button>
+          <div class="eschuchar">
+            <button mat-raised-button color="warn" (click)="start()">Eschuchar</button>
+            <button mat-button (click)="stop()">Detener</button>
+          </div>
 
         </div>
       </div>

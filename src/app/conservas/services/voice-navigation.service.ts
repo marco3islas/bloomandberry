@@ -52,6 +52,10 @@ export class VoiceNavigationService {
         this.router.navigate(['/contacto']);
       } else if (command.includes('productos')) {
         this.router.navigate(['/productos']);
+      } else if (command.includes('subir')) {
+        window.scrollBy({ top: -150, behavior: 'smooth' });
+      } else if (command.includes('bajar')) {
+        window.scrollBy({ top: 150, behavior: 'smooth' });
       } else {
         console.log('Comando no reconocido');
       }
