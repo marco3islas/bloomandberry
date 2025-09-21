@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { VoiceNavigationService } from '../../services/voice-navigation.service';
 
 
 @Component({
@@ -21,7 +22,8 @@ import { CommonModule } from '@angular/common';
 export default class Contact {
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+    private voiceNav: VoiceNavigationService,) {
     this.contactForm = this.fb.group({
       nombre: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -41,4 +43,11 @@ export default class Contact {
   get email() { return this.contactForm.get('email'); }
   get mensaje() { return this.contactForm.get('mensaje'); }
 
+  start() {
+    this.voiceNav.startListening();
+  }
+
+  stop() {
+    this.voiceNav.stopListening();
+  }
 }

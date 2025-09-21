@@ -12,6 +12,12 @@
         <mat-error *ngIf="nombre?.hasError('minlength')">Debe tener al menos 3 caracteres</mat-error>
       </mat-form-field>
 
+          <h4>Navegar con voz, presiona escuchar y pronuncia la seccion a la que quieres ir, o subir para ir
+            arriba o bajar para ir abajo.</h4>
+          <div class="eschuchar">
+            <button mat-raised-button color="warn" (click)="start()">Eschuchar</button>
+            <button mat-button (click)="stop()">Detener</button>
+          </div>
       <!-- Email -->
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Email</mat-label>
