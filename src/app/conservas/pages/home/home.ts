@@ -4,6 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
+import { VoiceNavigationService } from '../../services/voice-navigation.service';
+
 
 interface Valores {
   titulo: string;
@@ -26,7 +28,8 @@ interface Testimonials {
 })
 export default class Home {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private voiceNav: VoiceNavigationService) { }
 
   valor: Valores[] = [
     {
@@ -75,5 +78,14 @@ export default class Home {
   irProductos() {
     this.router.navigate(['productos']);
   }
+
+  start() {
+    this.voiceNav.startListening();
+  }
+
+  stop() {
+    this.voiceNav.stopListening();
+  }
+
 
 }

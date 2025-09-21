@@ -4,10 +4,6 @@
     <mat-icon>menu</mat-icon>
   </button>
 
-  <img class="logo" src="assets/images/bloom_&_berry.png">
-  <span class="brand">
-  Bloom and Berry
-  </span>
   <!-- Menú para pantallas grandes -->
   <div class="nav-links menuBar" role="menubar">
     @for (item of menuOptions; track item.route){
@@ -32,7 +28,8 @@
     </mat-menu>
   <!-- Logo -->
 
-    <!-- Botones audio -->
-    <button mat-raised-button color="accent" (click)="start()">Eschuchar</button>
-    <button mat-button (click)="stop()">Detener</button>
+  <img class="logo" src="assets/images/bloom_&_berry.png">
+  <span class="brand">
+  Bloom and Berry
+  </span>
 </mat-toolbar>
