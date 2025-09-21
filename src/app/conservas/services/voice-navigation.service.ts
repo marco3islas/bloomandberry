@@ -49,7 +49,7 @@ export class VoiceNavigationService {
       } else if (command.includes('about')) {
         this.router.navigate(['/main/about']);
       } else if (command.includes('contacto')) {
-        this.router.navigate(['/main/contacto']);
+        this.router.navigate(['/main/contact']);
       } else if (command.includes('productos')) {
         this.router.navigate(['/main/productos']);
       } else if (command.includes('subir')) {
