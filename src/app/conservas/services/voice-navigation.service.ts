@@ -45,13 +45,13 @@ export class VoiceNavigationService {
   private handleCommand(command: string) {
     this.ngZone.run(() => {
       if (command.includes('inicio')) {
-        this.router.navigate(['/']);
+        this.router.navigate(['/main/home']);
       } else if (command.includes('about')) {
-        this.router.navigate(['/about']);
+        this.router.navigate(['about']);
       } else if (command.includes('contacto')) {
         this.router.navigate(['/main/contacto']);
       } else if (command.includes('productos')) {
-        this.router.navigate(['/productos']);
+        this.router.navigate(['/main/productos']);
       } else if (command.includes('subir')) {
         window.scrollBy({ top: -300, behavior: 'smooth' });
       } else if (command.includes('bajar')) {
