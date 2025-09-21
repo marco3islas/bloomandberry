@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { VoiceNavigationService } from '../../services/voice-navigation.service';
 
 interface MenuOptions {
   icon: string;
@@ -13,11 +14,20 @@ interface MenuOptions {
 
 @Component({
   selector: 'app-navbar',
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, RouterLink, RouterLinkActive],
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })
 export class Navbar {
+
+  constructor(private voiceNav: VoiceNavigationService) { }
 
   menuOptions: MenuOptions[] = [
     {
@@ -46,6 +56,14 @@ export class Navbar {
     },
 
   ]
+
+  start() {
+    this.voiceNav.startListening();
+  }
+
+  stop() {
+    this.voiceNav.stopListening();
+  }
 
 
 

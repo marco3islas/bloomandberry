@@ -29,6 +29,11 @@
   background-color: #cbd6ef;
 }
 
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
