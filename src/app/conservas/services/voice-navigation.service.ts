@@ -47,7 +47,7 @@ export class VoiceNavigationService {
       if (command.includes('inicio')) {
         this.router.navigate(['/main/home']);
       } else if (command.includes('about')) {
-        this.router.navigate(['about']);
+        this.router.navigate(['/main/about']);
       } else if (command.includes('contacto')) {
         this.router.navigate(['/main/contacto']);
       } else if (command.includes('productos')) {

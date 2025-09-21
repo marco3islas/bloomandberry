@@ -283,6 +283,10 @@ mat-icon {
   z-index: 1000;
 }
 
+h4 {
+  width: 100%;
+  max-width: 330px;
+}
 
 /*=========Media queries ===========*/
 
